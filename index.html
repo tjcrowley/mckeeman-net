@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Darren Mckeeman — Novels</title>
+  <meta name="description" content="Discover novels by Darren Mckeeman, including America's Last Emperor and City of Apocrypha." />
+  <meta property="og:title" content="Darren Mckeeman — Novels" />
+  <meta property="og:description" content="A one-page home for Darren Mckeeman's novels." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0b12" />
+  <style>
+    :root {
+      --bg: #0b0b12;
+      --panel: #141424;
+      --text: #f4f3ff;
+      --muted: #b5b2d0;
+      --accent: #9f7aea;
+      --accent2: #22d3ee;
+      --line: #2a2940;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 500px at 80% -10%, #2a1f4d 0%, transparent 60%), var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 64px; }
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, #17162a, #11101d);
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .eyebrow { color: var(--accent2); text-transform: uppercase; letter-spacing: .08em; font-size: .74rem; font-weight: 700; }
+    h1 { margin: 10px 0 8px; font-size: clamp(1.8rem, 5vw, 2.9rem); line-height: 1.1; }
+    .sub { color: var(--muted); max-width: 68ch; }
+    .actions { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; text-decoration: none; color: white;
+      padding: 10px 14px; border-radius: 10px; border: 1px solid transparent;
+      font-weight: 600; font-size: .95rem;
+    }
+    .btn.primary { background: linear-gradient(90deg, var(--accent), #7c3aed); }
+    .btn.ghost { border-color: var(--line); background: #121126; color: var(--text); }
+
+    .grid { display: grid; gap: 14px; }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+      background: rgba(20, 20, 36, .9);
+    }
+    .card h2 { margin: 0 0 6px; font-size: 1.2rem; }
+    .meta { color: var(--muted); font-size: .92rem; margin-bottom: 10px; }
+    .card p { margin: 0 0 12px; color: #dddaf9; }
+    .links { display: flex; gap: 8px; flex-wrap: wrap; }
+    footer { margin-top: 26px; color: var(--muted); font-size: .88rem; }
+    .small { font-size: .82rem; opacity: .9; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Novels by Darren Mckeeman</div>
+      <h1>Stories from San Francisco’s weird, haunted edges.</h1>
+      <p class="sub">
+        Explore Darren Mckeeman’s fiction — from Gold Rush mythmaking and imperial ambition
+        to supernatural end-times roommates in a city that never behaves.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.amazon.com/stores/Darren-Mckeeman/author/B091NC8PD3" target="_blank" rel="noopener">View Author Page on Amazon</a>
+        <a class="btn ghost" href="mailto:hello@mckeeman.net">Contact / Media</a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>America’s Last Emperor</h2>
+        <div class="meta">A Tale of Old San Francisco, Book One</div>
+        <p>
+          Joshua Abraham Norton arrives during the 1849 Gold Rush carrying a secret,
+          and gets swept into the events that shape San Francisco — and eventually overshadow it.
+        </p>
+        <div class="links">
+          <a class="btn primary" href="https://www.amazon.com/Americas-Last-Emperor-Tale-Francisco-ebook/dp/B0942VG43L" target="_blank" rel="noopener">Buy on Amazon</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>City of Apocrypha</h2>
+        <div class="meta">New edition (Kindle + Paperback)</div>
+        <p>
+          A group of roommates in San Francisco navigate escalating supernatural weirdness near
+          the end of the world as they know it. Originally published as a serial on SF Goth ERRATA.
+        </p>
+        <div class="links">
+          <a class="btn primary" href="https://www.amazon.com/City-Apocrypha-Darren-Mckeeman-ebook/dp/B0GJGLRKLR" target="_blank" rel="noopener">Pre-order / Buy on Amazon</a>
+          <a class="btn ghost" href="https://www.amazon.com/City-Apocrypha-Darren-Mckeeman/dp/B004QEJ7H8" target="_blank" rel="noopener">Legacy Edition</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <div>© <span id="yr"></span> Darren Mckeeman</div>
+      <div class="small">One-page author site for mckeeman.net</div>
+    </footer>
+  </main>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
