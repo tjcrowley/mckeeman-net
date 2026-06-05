@@ -58,6 +58,15 @@
     .meta { color: var(--muted); font-size: .92rem; margin-bottom: 10px; }
     .card p { margin: 0 0 12px; color: #dddaf9; }
     .links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .newsletter {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px;
+      background: rgba(20, 20, 36, .9);
+      margin-top: 14px;
+    }
+    .newsletter h2 { margin: 0 0 6px; font-size: 1.2rem; }
+    .newsletter p { margin: 0 0 16px; color: #dddaf9; }
     footer { margin-top: 26px; color: var(--muted); font-size: .88rem; }
     .small { font-size: .82rem; opacity: .9; }
   </style>
@@ -102,6 +111,22 @@
           <a class="btn ghost" href="https://www.amazon.com/City-Apocrypha-Darren-Mckeeman/dp/B004QEJ7H8" target="_blank" rel="noopener">Legacy Edition</a>
         </div>
       </article>
+    </section>
+
+    <section class="newsletter">
+      <h2>Long Wharf</h2>
+      <div class="meta">San Francisco, layer by layer.</div>
+      <p>History, memoir, and fiction from SF's weird, haunted edges. Free newsletter.</p>
+      <script src="https://substackapi.com/widget.js" async></script>
+      <div id="substack-embed"></div>
+      <script>
+        window.SubstackFeedWidget = {
+          substackUrl: "tjcrowley.substack.com",
+          placeholder: "your@email.com",
+          buttonText: "Subscribe",
+          theme: "dark"
+        };
+      </script>
     </section>
 
     <footer>
