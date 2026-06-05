@@ -117,15 +117,30 @@
       <h2>Long Wharf</h2>
       <div class="meta">San Francisco, layer by layer.</div>
       <p>History, memoir, and fiction from SF's weird, haunted edges. Free newsletter.</p>
-      <script src="https://substackapi.com/widget.js" async></script>
-      <div id="substack-embed"></div>
+      <form id="substack-form" style="display:flex;gap:8px;flex-wrap:wrap;">
+        <input id="substack-email" type="email" placeholder="your@email.com" required
+          style="flex:1;min-width:200px;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:#0b0b12;color:var(--text);font-size:.95rem;" />
+        <button type="submit" class="btn primary" style="white-space:nowrap;">Subscribe to Long Wharf</button>
+      </form>
+      <div id="substack-msg" style="margin-top:10px;font-size:.9rem;color:var(--accent2);display:none;"></div>
       <script>
-        window.SubstackFeedWidget = {
-          substackUrl: "tjcrowley.substack.com",
-          placeholder: "your@email.com",
-          buttonText: "Subscribe",
-          theme: "dark"
-        };
+        document.getElementById('substack-form').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const email = document.getElementById('substack-email').value;
+          const msg = document.getElementById('substack-msg');
+          try {
+            const res = await fetch('https://tjcrowley.substack.com/api/v1/free', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, first_url: location.href, first_referrer: document.referrer })
+            });
+            msg.style.display = 'block';
+            msg.textContent = res.ok ? 'Check your email to confirm your subscription.' : 'Something went wrong — try subscribing at tjcrowley.substack.com.';
+          } catch {
+            msg.style.display = 'block';
+            msg.textContent = 'Something went wrong — try subscribing at tjcrowley.substack.com.';
+          }
+        });
       </script>
     </section>
 
