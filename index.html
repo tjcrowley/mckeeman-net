@@ -59,7 +59,7 @@
     .card p { margin: 0 0 12px; color: #dddaf9; }
     .links { display: flex; gap: 8px; flex-wrap: wrap; }
     .newsletter {
-      border: 1px solid var(--line);
+      border: 1px solid var(--accent2);
       border-radius: 14px;
       padding: 24px;
       background: rgba(20, 20, 36, .9);
@@ -81,7 +81,8 @@
         to supernatural end-times roommates in a city that never behaves.
       </p>
       <div class="actions">
-        <a class="btn primary" href="https://www.amazon.com/stores/Darren-Mckeeman/author/B091NC8PD3" target="_blank" rel="noopener">View Author Page on Amazon</a>
+        <a class="btn primary" href="https://longwharf.mckeeman.net">Read Long Wharf →</a>
+        <a class="btn ghost" href="https://www.amazon.com/stores/Darren-Mckeeman/author/B091NC8PD3" target="_blank" rel="noopener">Books on Amazon</a>
         <a class="btn ghost" href="mailto:hello@mckeeman.net">Contact / Media</a>
       </div>
     </section>
@@ -96,6 +97,9 @@
         <button type="submit" class="btn primary" style="white-space:nowrap;">Subscribe to Long Wharf</button>
       </form>
       <div id="substack-msg" style="margin-top:10px;font-size:.9rem;color:var(--accent2);display:none;"></div>
+      <div style="margin-top:14px;font-size:.88rem;">
+        <a href="https://longwharf.mckeeman.net" style="color:var(--accent2);text-decoration:none;">Browse past issues →</a>
+      </div>
       <script>
         document.getElementById('substack-form').addEventListener('submit', async function(e) {
           e.preventDefault();
@@ -108,10 +112,10 @@
               body: JSON.stringify({ email, first_url: location.href, first_referrer: document.referrer })
             });
             msg.style.display = 'block';
-            msg.textContent = res.ok ? 'Check your email to confirm your subscription.' : 'Something went wrong — try subscribing at tjcrowley.substack.com.';
+            msg.textContent = res.ok ? 'Check your email to confirm your subscription.' : 'Something went wrong — try subscribing at longwharf.mckeeman.net.';
           } catch {
             msg.style.display = 'block';
-            msg.textContent = 'Something went wrong — try subscribing at tjcrowley.substack.com.';
+            msg.textContent = 'Something went wrong — try subscribing at longwharf.mckeeman.net.';
           }
         });
       </script>
